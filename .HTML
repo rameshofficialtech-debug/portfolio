@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramesh | Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
+body{
+    background:#0f172a;
+    color:#fff;
+    scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+    position:fixed;
+    width:100%;
+    padding:15px 40px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(10px);
+}
+nav{display:flex;justify-content:space-between;}
+nav ul{display:flex;list-style:none;}
+nav ul li{margin-left:20px;}
+nav a{color:#fff;text-decoration:none;}
+
+/* HOME */
+.home{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    padding-top:80px;
+}
+.home img{
+    width:230px;
+    border-radius:50%;
+    border:4px solid #22c55e;
+}
+.highlight{color:#22c55e;}
+
+.btn{
+    display:inline-block;
+    padding:10px 20px;
+    margin:10px;
+    background:#22c55e;
+    border-radius:5px;
+    color:#000;
+    text-decoration:none;
+}
+
+/* SECTION */
+section{padding:80px 20px;text-align:center;}
+
+/* ABOUT */
+.about p{max-width:600px;margin:auto;}
+
+/* SKILLS */
+.skills{max-width:500px;margin:auto;}
+.skill{margin:15px 0;}
+.bar{height:8px;background:#333;border-radius:10px;}
+.fill{height:100%;background:#22c55e;border-radius:10px;}
+
+/* PROJECTS */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+.card:hover{transform:scale(1.05);}
+
+/* CONTACT */
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:5px 0;
+    border:none;
+    border-radius:5px;
+}
+
+/* FOOTER */
+footer{background:#000;padding:20px;text-align:center;}
+</style>
+
+</head>
+<body>
+
+<header>
+<nav>
+<h2>Ramesh</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header><hr>
+
+<!-- HOME -->
+<section id="home" class="home">
+<div>
+<h1>Hello, I'm <span class="highlight">Ramesh</span></h1>
+<p>B.Sc AI & Data Science Student | Frontend Developer</p>
+
+<a href="resume.pdf" class="btn" download>Download Resume</a>
+
+<a href="https://www.linkedin.com/in/ramesh-s-a2249b3b3" class="btn" target="_blank">LinkedIn</a>
+
+<a href="https://github.com/rameshofficialtech-debug" class="btn" target="_blank">GitHub</a>
+
+</div>
+
+<!-- YOUR IMAGE -->
+<img src="background-removed-background-removed.png" alt="Ramesh">
+</section><hr>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+<h2>About Me</h2>
+<p>
+Motivated Artificial Intelligence & Data Science student with strong skills in 
+HTML, CSS, and JavaScript. Passionate about building modern and responsive websites.
+</p>
+
+<div class="skills">
+
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+</div>
+</section><hr
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Frontend Web Projects</h3>
+<p>Responsive websites using HTML, CSS, JS</p>
+<a href="#" class="btn">Live</a>
+<a href="#" class="btn">Code</a>
+</div>
+
+<div class="card">
+<h3>AI-Based Projects</h3>
+<p>Beginner AI integration with web apps</p>
+<a href="#" class="btn">Live</a>
+<a href="#" class="btn">Code</a>
+</div>
+
+</div>
+</section><hr
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+
+<form onsubmit="sendEmail(event)">
+<input type="text" placeholder="Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<textarea id="msg" placeholder="Message"></textarea>
+<button class="btn">Send</button>
+</form>
+
+<p>📞 +91 7418371233</p>
+<p>📧 rameshofficialtech@gmail.com</p>
+
+</section><hr
+
+<footer><center>
+<p>© 2026 Ramesh | All Rights Reserved</p></center>
+</footer>
+
+<script>
+function sendEmail(e){
+    e.preventDefault();
+    let msg=document.getElementById("msg").value;
+    window.location.href=`mailto:rameshofficialtech@gmail.com?subject=Portfolio Contact&body=${msg}`;
+}
+</script><hr
+
+</body>
+</html>
